@@ -1,27 +1,53 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    setlocale(LC_ALL, "");
-    /*int a = 1;
-    while (a <= 10) {
-        cout << a << " ";
-        a ++;
-    }*/
-    /*int a, b;
-    cout << "input: ";
-    cin >> a >> b;
-    if (a > b) swap(a, b);
-    while (b >= a) {
-        cout << b << " ";
-        --b;
-    }*/
-    int a, b = 0;
-    cout << "input: ";
-    cin >> a;
-    while (a != 0) {
-        b += a;
-        cout << "input: ";
-        cin >> a;
+
+int main()
+{
+
+    /*
+    1. Вывести все целые числа от 1 до 10 через пробел
+    */
+    int a1 = 1;
+    while (a1 <= 10) cout << a1++ << " ";
+
+    /*
+    2. Вывести все целые числа от a до b
+    (a и b вводит пользователь)
+    в порядке убывания
+    */
+    int a2, b2;
+    cin >> a2 >> b2;
+    if (a2 > b2) swap(a2, b2);
+    while (b2 >= a2) cout << b2-- << " ";
+
+    /*
+    3. Пользователь вводит числа до тех пор, пока не введет 0.
+    После этого вывести сумму введенных ранее чисел.
+    */
+    int a3, summa = 0;
+
+    while (true) {
+        cin >> a3;
+        if (a3 == 0) {
+            cout << summa;
+            break;
+        }
+        summa += a3;
     }
-    cout << b;
+
+    /*
+    4. Пользователь вводит числа до тех пор, пока не введет 0.
+    После этого вывести наименьшее из введенных чисел.
+    */
+    int a4, min;
+    cin >> a4;
+    min = a4;
+
+    while (a4 != 0) {
+        if (min > a4) min = a4;
+        cin >> a4;
+    }
+    cout << min;
+
+
 }
