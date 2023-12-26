@@ -17,8 +17,7 @@ int main() {
 	cin >> a >> b >> n;
 	if (b < a) swap(a, b);
 	for (int i = 0; i < n; i++) {
-		cout << a << " ";
-		a++;
+		cout << a + rand ()% (b-a+1) << " ";
 	}*/
 	/*№3
 	float max;
